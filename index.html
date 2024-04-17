@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>15 Sections</title>
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 20 20"><circle cx="10" cy="10" r="6" fill="red" /></svg>'), auto;
+  }
+  .section h2 {
+  position: absolute;
+  top: 65%; /* 섹션 상단에서 아래 방향으로 50% 위치에 */
+  left: 50%; /* 섹션 좌측에서 우측 방향으로 50% 위치에 */
+  transform: translate(-50%, 50%); /* 요소를 수평으로 50%, 수직으로 50% 이동 */
+  color: white; /* 폰트 색상을 화이트로 설정 */
+  font-size: 28pt
+}
+
+
+  nav {
+    background-color: black;
+    padding: 20px;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .button-box {
+    width: 258px;
+    height: 73px;
+    background-color: gray;
+    margin-left: 58px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .button {
+    font-size: 48pt;
+    font-weight: lighter;
+    color: black;
+    text-decoration: none;
+  }
+
+  .section {
+    width: 100%; /* 섹션의 너비를 화면에 꽉 차게 설정 */
+    height: 50vh; /* 섹션의 높이를 화면 높이의 절반으로 설정 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    margin-top: 0; /* 위쪽 간격 없앰 */
+    margin-bottom: 0; /* 아래쪽 간격 없앰 */
+    position: relative; /* 부모 요소 기준으로 자식 요소의 위치를 조정하기 위해 추가 */
+  }
+
+  .section img {
+    max-width: 100%; /* 이미지를 섹션의 최대 너비에 맞춤 */
+    height: auto; /* 비율을 유지하면서 이미지 높이를 자동 조정 */
+    object-fit: cover; /* 이미지가 비율을 유지하면서 섹션을 덮도록 설정 */
+  }
+
+    
+  .sticker {
+    position: absolute;
+    z-index: 1; /* 다른 요소 위에 표시되도록 설정 */
+    width: 420px; /* 스티커의 너비 조절 */
+    height: auto; /* 비율을 유지하면서 높이 자동 조정 */
+  }
+
+  .sticker1 {
+    top: 130px;
+    right: 80px;
+  }
+
+  .sticker2 {
+    top: 130px;
+    right: 80px;
+  }
+  .hidden {
+    opacity: 0;
+  }
+
+  .sticker3 {
+    top: 130px;
+    right: 400px;
+    width: 350px
+  }
+
+  .sticker4 {
+    top: 130px;
+    right: 400px;
+    width: 350px
+  }
+  .hidden {
+    opacity: 0;
+  }
+  .sticker5 {
+    top: 230px;
+    right: 800px;
+    width: 350px
+  }
+  .sticker6 {
+    top: 230px;
+    right: 800px;
+    width: 350px
+  }
+  .hidden {
+    opacity: 0;
+  }
+
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="button-box"><a href="#" class="button">상품설명</a></div>
+  <div class="button-box"><a href="#" class="button">구매하기</a></div>
+  <div class="button-box"><a href="#" class="button">속도 측정</a></div>
+</nav>
+
+<div class="section" style="background-color: black; height: 120vh;">
+  <video autoplay muted loop class="video-bg" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;">
+    <source src="first1.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+  <h2 style="z-index: 1; position: relative;"></h2>
+</div>
+
+<div class="section" style="background-color: black; height: 52.5vh;">
+  <video autoplay muted loop class="video-bg" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: contain;">
+    <source src="bpm.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+  <h2 style="z-index: 1; position: relative;"></h2>
+</div>
+
+<div class="section" style="background-color: black; height: 20vh;">
+  <img src="현대인의 일상은.jpg" alt="Section 3 Image">
+  <h2></h2>
+</div>
+
+<div class="section" style="background-color: black; height: 110vh;">
+  <img src="메트로놈.jpg" alt="Section 4 Image">
+  <img class="sticker sticker1" src="./s3.png" alt="Sticker 1">
+  <img class="sticker sticker2" src="./s3t.png" alt="Sticker 2" onmouseover="hideSticker(this)" onmouseout="showSticker(this)">
+  <img class="sticker sticker3" src="./일.png" alt="Sticker 3">
+  <img class="sticker sticker4" src="./일t.png" alt="Sticker 4" onmouseover="hideSticker(this)" onmouseout="showSticker(this)">
+  <img class="sticker sticker5" src="./공부.png" alt="Sticker 5">
+  <img class="sticker sticker6" src="./공부t.png" alt="Sticker 6" onmouseover="hideSticker(this)" onmouseout="showSticker(this)">
+  <h2>무엇이 당신의 속도를 결정하나요?</h2>
+</div>
+
+<div class="section" style="background-color: black; height: 120vh;">
+  <video autoplay muted loop class="video-bg" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;">
+    <source src="바쁜.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+  <h2 style="z-index: 1; position: relative;"></h2>
+  <div class="button-box rounded-box" style="position: absolute; bottom: 20px; left: 50%; transform: translateX(-50%); background-color: white; border-radius: 50%;">
+    <a href="#" class="button" style="font-weight: bold; color: black;">버튼 텍스트</a>
+  </div>
+</div>
+
+<div class="section" style="background-color: #99ffcc;"><h2>Section 6</h2></div>
+<div class="section" style="background-color: #99ffff;"><h2>Section 7</h2></div>
+<div class="section" style="background-color: #99ccff;"><h2>Section 8</h2></div>
+<div class="section" style="background-color: #9999ff;"><h2>Section 9</h2></div>
+<div class="section" style="background-color: #cc99ff;"><h2>Section 10</h2></div>
+<div class="section" style="background-color: #ff99ff;"><h2>Section 11</h2></div>
+<div class="section" style="background-color: #ff99cc;"><h2>Section 12</h2></div>
+<div class="section" style="background-color: #ff6666;"><h2>Section 13</h2></div>
+<div class="section" style="background-color: #ff9966;"><h2>Section 14</h2></div>
+<div class="section" style="background-color: #ffcc66;"><h2>Section 15</h2></div>
+
+<script>
+  // 스티커를 숨기는 함수
+  function hideSticker(element) {
+    element.classList.add("hidden");
+  }
+
+  // 스티커를 보이는 함수
+  function showSticker(element) {
+    element.classList.remove("hidden");
+  }
+</script>
+</body>
+</html>
